@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as vars;
+
+.navbar {
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: vars.$color-gray600;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      padding: 10px;
+      color: vars.$color-gray50;
+      background-color: vars.$color-gray900;
+    }
+  }
+}

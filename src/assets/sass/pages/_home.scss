@@ -1,0 +1,24 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  gap: 1em;
+  height: 100vh;
+  position: relative;
+
+  &__chat-container {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 60px;
+  }
+
+  &__input-container {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    padding: 0.5em;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as vars;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: vars.$font-family;
+  color: vars.$color-gray800;
+  background-color: vars.$color-gray100;
+}

@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as vars;
+
+.messages {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &__item {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    max-width: 60%;
+  }
+
+  &__item--user {
+    align-self: flex-end;
+    background-color: vars.$color-gray700;
+    color: vars.$color-gray100;
+  }
+
+  &__item--response {
+    align-self: flex-start;
+    background-color: vars.$color-gray300;
+    color: vars.$color-gray900;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as vars;
+
+.input-component {
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+  padding: 1em;
+
+  &__input {
+    flex: 1;
+    padding: 0.5em;
+    border: 2px solid vars.$color-gray800;
+    box-shadow: -3px 5px vars.$color-gray800;
+    font-size: 18px;
+  }
+}

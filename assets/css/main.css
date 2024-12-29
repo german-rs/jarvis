@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+h1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+h4 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+h5 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+h6 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: #374151;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /* border: 1px solid red; */
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .section {
+    margin-top: 10rem;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+/* xs */
+/* @media (min-width: 475px){
+} */
+/* sm */
+/* @media (min-width: 640px){
+} */
+/* md */
+/* @media (min-width: 768px){
+} */
+/* lg */
+/* @media (min-width: 1024px){
+} */
+/* xl */
+/* @media (min-width: 1280px){
+} */
+/* 2xl */
+/* @media (min-width: 1536px){
+} */
+.navbar__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.navbar__item {
+  margin-right: 20px;
+}
+.navbar__item:last-child {
+  margin-right: 0;
+}
+.navbar__link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.navbar__link:hover {
+  padding: 10px;
+  color: #f8fafc;
+  background-color: #111827;
+}
+
+.chat-component {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.messages {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.messages__item {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  max-width: 60%;
+}
+.messages__item--user {
+  align-self: flex-end;
+  background-color: #374151;
+  color: #f3f4f6;
+}
+.messages__item--response {
+  align-self: flex-start;
+  background-color: #d1d5db;
+  color: #111827;
+}
+
+.input-component {
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+  padding: 1em;
+}
+.input-component__input {
+  flex: 1;
+  padding: 0.5em;
+  border: 2px solid #1f2937;
+  box-shadow: -3px 5px #1f2937;
+  font-size: 18px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  gap: 1em;
+  height: 100vh;
+  position: relative;
+}
+.home__chat-container {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 60px;
+}
+.home__input-container {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  padding: 0.5em;
+}/*# sourceMappingURL=main.css.map */
