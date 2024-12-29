@@ -23,4 +23,4 @@ El desarrollo del proyecto sigue principios de metodología ágil, permitiendo i
 
 ## Conclusión
 
-El **Proyecto de Chat Inteligente con Cohere** representa un avance significativo en la integración de inteligencia artificial en aplicaciones de mensajería, proporcionando a los usuarios una herramienta poderosa para la comunicación y la asistencia en tiempo real. A través de tecnologías avanzadas y un diseño centrado en el usuario, este proyecto busca redefinir la forma en que interactuamos con los sistemas automatizados, ofreciendo una experiencia de chat más inteligente y eficiente.
+El **Proyecto Jarvis** representa un avance significativo en la integración de inteligencia artificial en aplicaciones de mensajería, proporcionando a los usuarios una herramienta poderosa para la comunicación y la asistencia en tiempo real. A través de tecnologías avanzadas y un diseño centrado en el usuario, este proyecto busca redefinir la forma en que interactuamos con los sistemas automatizados, ofreciendo una experiencia de chat más inteligente y eficiente.
