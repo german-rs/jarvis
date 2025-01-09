@@ -12,6 +12,5 @@ defineProps({
 <template>
   <div class="chat-component">
     <MessageListComponent :messages="messages" />
-    <!-- Quita el props. -->
   </div>
 </template>

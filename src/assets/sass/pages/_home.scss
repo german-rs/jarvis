@@ -9,6 +9,8 @@
   position: relative;
 
   &__chat-container {
+    display: flex;
+    justify-content: center;
     flex: 1;
     width: 100%;
     overflow-y: auto;
@@ -16,6 +18,9 @@
   }
 
   &__input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 50px;
     width: 100%;

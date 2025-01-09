@@ -2,15 +2,20 @@
 
 .input-component {
   width: 100%;
+  max-width: 800px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.5em;
   padding: 1em;
 
   &__input {
+    outline: none;
     flex: 1;
     padding: 0.5em;
     border: 2px solid vars.$color-gray800;
     box-shadow: -3px 5px vars.$color-gray800;
     font-size: 18px;
+    font-family: vars.$font-family;
   }
 }

@@ -4,7 +4,7 @@ import NavbarComponent from './components/NavbarComponent.vue'
 </script>
 
 <template>
-  <header class="header">
+  <header class="header container">
     <div>
       <NavbarComponent />
     </div>
