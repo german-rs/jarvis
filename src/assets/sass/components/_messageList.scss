@@ -9,19 +9,103 @@
 
   &__item {
     padding: 0.5em;
-    border: 1px solid #ddd;
-    max-width: 60%;
+
+    p {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    ul,
+    ol {
+      margin: 0.5em 0;
+      padding-left: 1.5em;
+    }
+
+    code {
+      background-color: rgba(vars.$color-gray700, 0.1);
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: rgba(vars.$color-gray700, 0.1);
+      padding: 1em;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 0.5em 0;
+
+      code {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
   }
 
   &__item--user {
     align-self: flex-end;
     background-color: vars.$color-gray700;
     color: vars.$color-gray100;
+    max-width: 60%;
   }
 
   &__item--response {
     align-self: flex-start;
-    background-color: vars.$color-gray200;
     color: vars.$color-gray900;
+    width: 100%;
+    background-color: rgba(vars.$color-gray100, 0.5);
+  }
+
+  &__item--typing {
+    padding: 1em;
+    width: auto !important;
+    min-width: 60px;
+    max-width: 100px;
+  }
+}
+
+.message-content {
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: vars.$color-gray700;
+    animation: typing 1.4s infinite ease-in-out;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

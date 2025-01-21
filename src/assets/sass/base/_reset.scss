@@ -14,3 +14,9 @@ body {
   color: vars.$color-gray800;
   background-color: vars.$color-gray100;
 }
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}

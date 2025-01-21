@@ -4,15 +4,24 @@ import NavbarComponent from './components/NavbarComponent.vue'
 </script>
 
 <template>
-  <header class="header container">
-    <div>
-      <NavbarComponent />
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="app-container">
+    <header class="header container">
+      <div>
+        <NavbarComponent />
+      </div>
+    </header>
+    <RouterView />
+  </div>
 </template>
+
 <style lang="scss" scoped>
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: row;

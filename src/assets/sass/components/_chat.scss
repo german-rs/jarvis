@@ -1,9 +1,13 @@
 .chat-component {
   width: 100%;
   max-width: 800px;
-  height: 80%;
-  flex: 1;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto; // Este será el único contenedor con scroll
+  scrollbar-width: thin;
+
+  // Asegura espacio para el input
+  padding-bottom: 70px; // Ajusta este valor según la altura de tu input
 }
