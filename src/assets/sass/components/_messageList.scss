@@ -109,3 +109,52 @@
     transform: translateY(-10px);
   }
 }
+
+.message-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+
+  &:hover {
+    .copy-button {
+      opacity: 1;
+    }
+  }
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25em;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$color-gray700;
+
+  &:hover {
+    background-color: rgba(vars.$color-gray700, 0.1);
+  }
+
+  &.copied {
+    opacity: 1;
+    color: vars.$color-green500;
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.messages__item--response .message-content {
+  padding-right: 2em;
+}
