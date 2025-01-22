@@ -10,8 +10,11 @@
 @use 'components/messageList';
 @use 'components/input';
 @use 'components/themeToggle';
+@use 'components/button';
 
 @use 'pages/home';
+@use 'pages/about';
+@use 'pages/notFound';
 
 @use 'themes/themes';
 

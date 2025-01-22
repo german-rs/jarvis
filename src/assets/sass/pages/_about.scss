@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as vars;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: vars.$color-gray900;
+
+  &__title {
+    font-size: 2em;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 2em;
+  }
+
+  &__image {
+    margin-top: 2em;
+    width: 300px;
+  }
+
+  &__description {
+    max-width: 600px;
+  }
+}
+
+body.dark-mode .about {
+  color: vars.$color-gray50;
+}
+
+body.dark-mode .about__title {
+  color: vars.$color-gray200;
+}
+
+body.dark-mode .about__description {
+  color: vars.$color-gray100;
+}

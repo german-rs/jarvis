@@ -380,6 +380,36 @@ body.dark-mode .input-component__input {
   align-items: center;
 }
 
+.btn, .not-found__button {
+  padding: 1em 2em;
+  border: 2px solid #1f2937;
+  color: #1f2937;
+  background-color: #e5e7eb;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: -3px 5px #1f2937;
+  transition: all 0.7s ease;
+}
+.btn:hover, .not-found__button:hover {
+  background-color: #1f2937;
+  color: #f8fafc;
+}
+
+body.dark-mode .btn, body.dark-mode .not-found__button {
+  border-color: #e5e7eb;
+  color: #e5e7eb;
+  background-color: #1f2937;
+  box-shadow: -3px 5px #e5e7eb;
+}
+body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -414,7 +444,7 @@ body.dark-mode .input-component__input {
 }
 
 body.dark-mode .home__title {
-  color: #f8fafc;
+  color: #e5e7eb;
 }
 
 body.dark-mode .home__chat-container {
@@ -423,6 +453,82 @@ body.dark-mode .home__chat-container {
 
 body.dark-mode .home__input-container {
   background-color: #111827;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: #111827;
+}
+.about__title {
+  font-size: 2em;
+}
+.about__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  gap: 2em;
+}
+.about__image {
+  margin-top: 2em;
+  width: 300px;
+}
+.about__description {
+  max-width: 600px;
+}
+
+body.dark-mode .about {
+  color: #f8fafc;
+}
+
+body.dark-mode .about__title {
+  color: #e5e7eb;
+}
+
+body.dark-mode .about__description {
+  color: #f3f4f6;
+}
+
+.not-found {
+  text-align: center;
+  padding: 2em;
+  color: #1f2937;
+}
+.not-found__title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.not-found__message, .not-found__suggestion {
+  margin: 0.5em 0;
+}
+.not-found__link {
+  color: #030712;
+  text-decoration: underline;
+}
+.not-found__button {
+  margin-top: 2em;
+}
+.not-found__image {
+  margin-top: 2em;
+  max-width: 100%;
+  height: auto;
+}
+
+body.dark-mode .not-found {
+  color: #f3f4f6;
+}
+
+body.dark-mode .not-found__title {
+  color: #e5e7eb;
+}
+
+body.dark-mode .not-found__link {
+  color: #fb923c;
 }
 
 body {

@@ -1,0 +1,47 @@
+@use 'sass:color';
+@use '../abstracts/variables' as vars;
+@use '../components/button';
+
+.not-found {
+  text-align: center;
+  padding: 2em;
+  color: vars.$color-gray800;
+
+  &__title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  &__message,
+  &__suggestion {
+    margin: 0.5em 0;
+  }
+
+  &__link {
+    color: vars.$color-gray950;
+    text-decoration: underline;
+  }
+
+  &__button {
+    @extend .btn;
+    margin-top: 2em;
+  }
+
+  &__image {
+    margin-top: 2em;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+body.dark-mode .not-found {
+  color: vars.$color-gray100;
+}
+
+body.dark-mode .not-found__title {
+  color: vars.$color-gray200;
+}
+
+body.dark-mode .not-found__link {
+  color: vars.$color-orange400;
+}

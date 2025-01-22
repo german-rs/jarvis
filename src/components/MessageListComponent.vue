@@ -34,7 +34,6 @@ const copyToClipboard = async (message, index) => {
   try {
     await navigator.clipboard.writeText(message.content)
     copiedMessageId.value = index
-    // Reset copied state after 2 seconds
     setTimeout(() => {
       copiedMessageId.value = null
     }, 2000)
