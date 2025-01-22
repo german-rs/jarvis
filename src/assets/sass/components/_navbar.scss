@@ -27,4 +27,15 @@
       background-color: vars.$color-gray900;
     }
   }
+
+  body.dark-mode & {
+    &__link {
+      color: vars.$color-gray300;
+
+      &:hover {
+        color: vars.$color-gray900;
+        background-color: vars.$color-gray50;
+      }
+    }
+  }
 }

@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as vars;
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    &--sun {
+      fill: vars.$color-orange400;
+    }
+
+    &--moon {
+      fill: vars.$color-orange100;
+    }
+  }
+}
+
+.theme-toggle--appearance {
+  display: inline-flex;
+  align-items: center;
+}

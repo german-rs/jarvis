@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as vars;
+
 .home {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,7 @@
 
   &__title {
     text-align: center;
+    color: vars.$color-gray900;
   }
 
   &__chat-container {
@@ -18,6 +21,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    background-color: vars.$color-gray50;
   }
 
   &__input-container {
@@ -28,5 +32,18 @@
     z-index: 10;
     display: flex;
     justify-content: center;
+    background-color: vars.$color-gray50;
   }
+}
+
+body.dark-mode .home__title {
+  color: vars.$color-gray50;
+}
+
+body.dark-mode .home__chat-container {
+  background-color: vars.$color-gray900;
+}
+
+body.dark-mode .home__input-container {
+  background-color: vars.$color-gray900;
 }

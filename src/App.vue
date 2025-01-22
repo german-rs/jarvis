@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import NavbarComponent from './components/NavbarComponent.vue'
+import ThemeToggle from './components/ThemeToggle.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import NavbarComponent from './components/NavbarComponent.vue'
       <div>
         <NavbarComponent />
       </div>
+      <ThemeToggle />
     </header>
     <RouterView />
   </div>
@@ -25,7 +27,7 @@ import NavbarComponent from './components/NavbarComponent.vue'
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1em;
 }

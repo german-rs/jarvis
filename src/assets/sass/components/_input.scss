@@ -17,5 +17,15 @@
     box-shadow: -3px 5px vars.$color-gray800;
     font-size: 18px;
     font-family: vars.$font-family;
+    background-color: vars.$color-gray50;
+    color: vars.$color-gray900;
+    transition: all 0.3s ease-in-out;
   }
+}
+
+body.dark-mode .input-component__input {
+  background-color: vars.$color-gray900;
+  color: vars.$color-gray50;
+  border-color: vars.$color-gray50;
+  box-shadow: -3px 5px vars.$color-gray50;
 }

@@ -50,6 +50,12 @@ body {
   background-color: #f3f4f6;
 }
 
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -138,13 +144,24 @@ body {
   color: #f8fafc;
   background-color: #111827;
 }
+body.dark-mode .navbar__link {
+  color: #d1d5db;
+}
+body.dark-mode .navbar__link:hover {
+  color: #111827;
+  background-color: #f8fafc;
+}
 
 .chat-component {
   width: 100%;
-  flex: 1;
+  max-width: 800px;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-bottom: 70px;
 }
 
 .messages {
@@ -156,53 +173,283 @@ body {
 }
 .messages__item {
   padding: 0.5em;
-  border: 1px solid #ddd;
-  max-width: 60%;
+}
+.messages__item p {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.messages__item ul,
+.messages__item ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+.messages__item code {
+  background-color: rgba(55, 65, 81, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+.messages__item pre {
+  background-color: rgba(55, 65, 81, 0.1);
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+.messages__item pre code {
+  background-color: transparent;
+  padding: 0;
 }
 .messages__item--user {
   align-self: flex-end;
   background-color: #374151;
   color: #f3f4f6;
+  max-width: 60%;
 }
 .messages__item--response {
   align-self: flex-start;
-  background-color: #d1d5db;
   color: #111827;
+  width: 100%;
+  background-color: rgba(243, 244, 246, 0.5);
+}
+.messages__item--typing {
+  padding: 1em;
+  width: auto !important;
+  min-width: 60px;
+  max-width: 100px;
+}
+
+.message-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+.message-content a:hover {
+  opacity: 0.8;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #374151;
+  animation: typing 1.4s infinite ease-in-out;
+}
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.message-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+.message-wrapper:hover .copy-button {
+  opacity: 1;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25em;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+}
+.copy-button:hover {
+  background-color: rgba(55, 65, 81, 0.1);
+}
+.copy-button.copied {
+  opacity: 1;
+  color: #22c55e;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.copy-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.messages__item--response .message-content {
+  padding-right: 2em;
+}
+
+body.dark-mode .messages__item--user {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+body.dark-mode .messages__item--response {
+  background-color: rgba(55, 65, 81, 0.5);
+  color: #f8fafc;
+}
+
+body.dark-mode .typing-indicator span {
+  background-color: #f8fafc;
+}
+
+body.dark-mode .copy-button {
+  color: #f8fafc;
+}
+body.dark-mode .copy-button:hover {
+  background-color: rgba(248, 250, 252, 0.1);
+}
+body.dark-mode .copy-button.copied {
+  color: #22c55e;
+  background-color: rgba(76, 175, 80, 0.1);
 }
 
 .input-component {
   width: 100%;
+  max-width: 800px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.5em;
   padding: 1em;
 }
 .input-component__input {
+  outline: none;
   flex: 1;
   padding: 0.5em;
   border: 2px solid #1f2937;
   box-shadow: -3px 5px #1f2937;
   font-size: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #f8fafc;
+  color: #111827;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode .input-component__input {
+  background-color: #111827;
+  color: #f8fafc;
+  border-color: #f8fafc;
+  box-shadow: -3px 5px #f8fafc;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.theme-toggle__icon--sun {
+  fill: #fb923c;
+}
+.theme-toggle__icon--moon {
+  fill: #ffedd5;
+}
+
+.theme-toggle--appearance {
+  display: inline-flex;
+  align-items: center;
 }
 
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  height: calc(100vh - 70px);
+  position: relative;
   padding: 1em;
   gap: 1em;
-  height: 100vh;
-  position: relative;
+  overflow: hidden;
+}
+.home__title {
+  text-align: center;
+  color: #111827;
 }
 .home__chat-container {
-  flex: 1;
+  position: relative;
   width: 100%;
-  overflow-y: auto;
-  padding-bottom: 60px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #f8fafc;
 }
 .home__input-container {
-  position: fixed;
-  bottom: 50px;
+  position: sticky;
+  bottom: 0;
   width: 100%;
   padding: 0.5em;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  background-color: #f8fafc;
+}
+
+body.dark-mode .home__title {
+  color: #f8fafc;
+}
+
+body.dark-mode .home__chat-container {
+  background-color: #111827;
+}
+
+body.dark-mode .home__input-container {
+  background-color: #111827;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #f8fafc;
+  color: #111827;
+}
+body .primary {
+  color: #374151;
+}
+body .secondary {
+  color: #4b5563;
+}
+body .accent {
+  color: #22c55e;
+}
+
+body.dark-mode {
+  background-color: #111827;
+  color: #f8fafc;
+}
+body.dark-mode .primary {
+  color: #f3f4f6;
+}
+body.dark-mode .secondary {
+  color: #e5e7eb;
+}
+body.dark-mode .accent {
+  color: #22c55e;
 }/*# sourceMappingURL=main.css.map */

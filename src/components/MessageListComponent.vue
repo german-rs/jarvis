@@ -49,7 +49,6 @@ const copyToClipboard = async (message, index) => {
     <div v-for="(message, index) in messages" :key="index" :class="messageClass(message.type)">
       <div class="message-wrapper">
         <div class="message-content" v-html="processMessage(message.content)"></div>
-        <!-- Solo mostrar el botón de copiar si no es un mensaje del usuario -->
         <button
           v-if="message.type !== 'user'"
           class="copy-button"
@@ -58,7 +57,6 @@ const copyToClipboard = async (message, index) => {
           :aria-label="copiedMessageId === index ? 'Copiado!' : 'Copiar mensaje'"
         >
           <span class="copy-icon" v-if="copiedMessageId !== index">
-            <!-- Copy icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -75,7 +73,6 @@ const copyToClipboard = async (message, index) => {
             </svg>
           </span>
           <span class="check-icon" v-else>
-            <!-- Check icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -103,51 +100,3 @@ const copyToClipboard = async (message, index) => {
     </div>
   </div>
 </template>
-
-<!-- <script setup>
-import { marked } from 'marked'
-import DOMPurify from 'dompurify'
-
-defineProps({
-  messages: {
-    type: Array,
-    required: true,
-  },
-  isLoading: {
-    type: Boolean,
-    default: false,
-  },
-})
-
-const messageClass = (type) => {
-  return type === 'user'
-    ? 'messages__item messages__item--user'
-    : 'messages__item messages__item--response'
-}
-
-marked.setOptions({
-  breaks: true,
-  gfm: true,
-})
-
-const processMessage = (content) => {
-  const rawHtml = marked(content || '')
-  return DOMPurify.sanitize(rawHtml)
-}
-</script>
-
-<template>
-  <div class="messages">
-    <div v-for="(message, index) in messages" :key="index" :class="messageClass(message.type)">
-      <div class="message-content" v-html="processMessage(message.content)"></div>
-    </div>
-
-    <div v-if="isLoading" class="messages__item messages__item--response messages__item--typing">
-      <div class="typing-indicator">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-</template> -->

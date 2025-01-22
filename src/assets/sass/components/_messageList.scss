@@ -158,3 +158,30 @@
 .messages__item--response .message-content {
   padding-right: 2em;
 }
+
+body.dark-mode .messages__item--user {
+  background-color: vars.$color-gray800;
+  color: vars.$color-gray100;
+}
+
+body.dark-mode .messages__item--response {
+  background-color: rgba(vars.$color-gray700, 0.5);
+  color: vars.$color-gray50;
+}
+
+body.dark-mode .typing-indicator span {
+  background-color: vars.$color-gray50;
+}
+
+body.dark-mode .copy-button {
+  color: vars.$color-gray50;
+
+  &:hover {
+    background-color: rgba(vars.$color-gray50, 0.1);
+  }
+
+  &.copied {
+    color: vars.$color-green500;
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+}

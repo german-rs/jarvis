@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '../abstracts/variables' as vars;
+
+$light-theme: (
+  background: vars.$color-gray50,
+  text: vars.$color-gray900,
+  primary: vars.$color-gray700,
+  secondary: vars.$color-gray600,
+  accent: vars.$color-green500,
+);
+
+$dark-theme: (
+  background: vars.$color-gray900,
+  text: vars.$color-gray50,
+  primary: vars.$color-gray100,
+  secondary: vars.$color-gray200,
+  accent: vars.$color-green500,
+);
+
+@mixin theme($theme-map) {
+  background-color: map.get($theme-map, background);
+  color: map.get($theme-map, text);
+
+  .primary {
+    color: map.get($theme-map, primary);
+  }
+
+  .secondary {
+    color: map.get($theme-map, secondary);
+  }
+
+  .accent {
+    color: map.get($theme-map, accent);
+  }
+}

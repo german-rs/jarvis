@@ -9,5 +9,19 @@
 @use 'components/chat';
 @use 'components/messageList';
 @use 'components/input';
+@use 'components/themeToggle';
 
 @use 'pages/home';
+
+@use 'themes/themes';
+
+@use 'themes/themes' as *;
+
+body {
+  font-family: vars.$font-family;
+  @include theme($light-theme);
+}
+
+body.dark-mode {
+  @include theme($dark-theme);
+}
