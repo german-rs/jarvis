@@ -6,6 +6,17 @@
   align-items: center;
   gap: 1em;
 
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 40px;
+      width: auto;
+      transition: opacity 0.3s ease;
+    }
+  }
+
   &__list {
     list-style: none;
     padding: 0;

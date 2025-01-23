@@ -16,7 +16,7 @@ const routes = [
     name: 'about',
     component: () => import('../views/AboutView.vue'),
     meta: {
-      title: 'Jarvis I.A. | Acerca de Germán Riveros',
+      title: 'Jarvis I.A. | Acerca de Jarvis',
     },
   },
   {

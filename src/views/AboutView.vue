@@ -1,18 +1,17 @@
 <template>
   <div class="about">
-    <h1 class="about__title">About</h1>
+    <h1 class="about__title">Acerca</h1>
     <section class="about__section">
       <img
         class="about__image"
-        src="../../public/german-rs.webp"
+        src="../../public/jarvis_logo.webp"
         alt="Foto de perfil Germán Riveros"
       />
       <p class="about__description">
-        El Proyecto de Chat Inteligente con Cohere es una aplicación de mensajería basada en
-        inteligencia artificial que facilita la comunicación fluida entre usuarios y un asistente
-        virtual inteligente. Este proyecto integra servicios avanzados de procesamiento de lenguaje
-        natural proporcionados por Cohere y constituye el trabajo final de un bootcamp frontend,
-        demostrando habilidades en el desarrollo de interfaces modernas y efectivas.
+        Jarvis es un chat inteligente que utiliza la tecnología de Cohere para ofrecer servicios
+        avanzados de procesamiento de lenguaje natural. Esta aplicación de mensajería, basada en
+        inteligencia artificial, facilita la comunicación fluida entre usuarios y un asistente
+        virtual. Jarvis se ha creado como proyecto final de un bootcamp frontend.
       </p>
     </section>
   </div>

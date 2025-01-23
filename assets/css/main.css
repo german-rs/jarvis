@@ -129,6 +129,15 @@ html {
   align-items: center;
   gap: 1em;
 }
+.navbar__icon {
+  display: flex;
+  align-items: center;
+}
+.navbar__icon img {
+  max-height: 40px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
 .navbar__list {
   list-style: none;
   padding: 0;
