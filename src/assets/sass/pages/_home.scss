@@ -11,7 +11,7 @@
 
   &__title {
     text-align: center;
-    color: vars.$color-gray900;
+    color: vars.$color-gray700;
   }
 
   &__chat-container {
@@ -21,7 +21,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background-color: vars.$color-gray50;
+    background-color: vars.$color-gray100;
   }
 
   &__input-container {
@@ -32,7 +32,7 @@
     z-index: 10;
     display: flex;
     justify-content: center;
-    background-color: vars.$color-gray50;
+    background-color: vars.$color-gray100;
   }
 }
 

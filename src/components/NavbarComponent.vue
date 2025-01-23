@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <nav class="navbar">
+    <img class="navbar__img" src="../../public/logo.webp" alt="logo jarvis" />
     <ul class="navbar__list">
       <li class="navbar__item">
         <RouterLink to="/" class="navbar__link">Jarvis I.A.</RouterLink>

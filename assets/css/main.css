@@ -1,3 +1,4 @@
+@import '~modern-normalize/modern-normalize.css';
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 h1 {
   font-family: "IBM Plex Mono", monospace;
@@ -122,6 +123,12 @@ html {
 /* 2xl */
 /* @media (min-width: 1536px){
 } */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
 .navbar__list {
   list-style: none;
   padding: 0;
@@ -302,12 +309,12 @@ body.dark-mode .navbar__link:hover {
 }
 
 body.dark-mode .messages__item--user {
-  background-color: #1f2937;
-  color: #f3f4f6;
+  background-color: #e5e7eb;
+  color: #1f2937;
 }
 
 body.dark-mode .messages__item--response {
-  background-color: rgba(55, 65, 81, 0.5);
+  background-color: rgba(17, 24, 39, 0.5);
   color: #f8fafc;
 }
 
@@ -369,10 +376,10 @@ body.dark-mode .input-component__input {
   height: 24px;
 }
 .theme-toggle__icon--sun {
-  fill: #fb923c;
+  fill: #1f2937;
 }
 .theme-toggle__icon--moon {
-  fill: #ffedd5;
+  fill: #f3f4f6;
 }
 
 .theme-toggle--appearance {
@@ -421,7 +428,7 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
 }
 .home__title {
   text-align: center;
-  color: #111827;
+  color: #374151;
 }
 .home__chat-container {
   position: relative;
@@ -430,7 +437,7 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: #f8fafc;
+  background-color: #f3f4f6;
 }
 .home__input-container {
   position: sticky;
@@ -440,7 +447,7 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
   z-index: 10;
   display: flex;
   justify-content: center;
-  background-color: #f8fafc;
+  background-color: #f3f4f6;
 }
 
 body.dark-mode .home__title {
@@ -533,8 +540,8 @@ body.dark-mode .not-found__link {
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  background-color: #f8fafc;
-  color: #111827;
+  background-color: #f3f4f6;
+  color: #1f2937;
 }
 body .primary {
   color: #374151;
@@ -548,7 +555,7 @@ body .accent {
 
 body.dark-mode {
   background-color: #111827;
-  color: #f8fafc;
+  color: #f3f4f6;
 }
 body.dark-mode .primary {
   color: #f3f4f6;

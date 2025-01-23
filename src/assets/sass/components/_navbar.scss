@@ -1,6 +1,11 @@
 @use '../abstracts/variables' as vars;
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
   &__list {
     list-style: none;
     padding: 0;
