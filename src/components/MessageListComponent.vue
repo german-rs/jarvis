@@ -44,7 +44,7 @@ const copyToClipboard = async (message, index) => {
 </script>
 
 <template>
-  <div class="messages">
+  <div class="messages container">
     <div v-for="(message, index) in messages" :key="index" :class="messageClass(message.type)">
       <div class="message-wrapper">
         <div class="message-content" v-html="processMessage(message.content)"></div>

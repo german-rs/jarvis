@@ -6,15 +6,19 @@
   text-align: center;
   padding: 2em;
   color: vars.$color-gray800;
+  border: 1px solid vars.$color-gray700;
+  height: 100vh;
 
   &__title {
     font-size: 2em;
     margin-bottom: 0.5em;
+    border: 1px solid vars.$color-gray700;
   }
 
   &__message,
   &__suggestion {
     margin: 0.5em 0;
+    border: 1px solid vars.$color-gray700;
   }
 
   &__link {

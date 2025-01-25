@@ -1,8 +1,13 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+import BrandComponent from '@/components/BrandComponent.vue'
+</script>
+
 <template>
   <nav class="navbar">
     <div class="navbar__icon">
       <RouterLink to="/">
-        <img src="../../public/jarvis_logo.webp" alt="Logo" class="navbar__logo" />
+        <BrandComponent :class="navbar__logo" />
       </RouterLink>
     </div>
     <ul class="navbar__list">

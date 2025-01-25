@@ -27,6 +27,7 @@
       padding: 0.2em 0.4em;
       border-radius: 3px;
       font-family: monospace;
+      width: 90%;
     }
 
     pre {
@@ -41,6 +42,14 @@
         padding: 0;
       }
     }
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9em;
+    }
   }
 
   &__item--user {
@@ -48,6 +57,10 @@
     background-color: vars.$color-gray700;
     color: vars.$color-gray100;
     max-width: 60%;
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 
   &__item--response {
@@ -55,6 +68,10 @@
     color: vars.$color-gray900;
     width: 100%;
     background-color: rgba(vars.$color-gray100, 0.5);
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
   }
 
   &__item--typing {
@@ -115,6 +132,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.5em;
+  border: 1px solid vars.$color-gray700;
 
   &:hover {
     .copy-button {
@@ -124,9 +142,9 @@
 }
 
 .copy-button {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  // position: absolute;
+  // top: 0.5em;
+  // right: 0.5em;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -138,6 +156,7 @@
   align-items: center;
   justify-content: center;
   color: vars.$color-gray700;
+  align-self: flex-end;
 
   &:hover {
     background-color: rgba(vars.$color-gray700, 0.1);
@@ -153,10 +172,16 @@
     width: 16px;
     height: 16px;
   }
+
+  @media (max-width: 480px) {
+    // Ejemplo de ocultar el botón en pantallas pequeñas
+    display: none;
+  }
 }
 
 .messages__item--response .message-content {
-  padding-right: 2em;
+  // padding-right: 2em;
+  padding-right: 0;
 }
 
 body.dark-mode .messages__item--user {
@@ -185,3 +210,192 @@ body.dark-mode .copy-button {
     background-color: rgba(76, 175, 80, 0.1);
   }
 }
+
+// @use '../abstracts/variables' as vars;
+
+// .messages {
+//   width: 100%;
+//   padding: 1em;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1em;
+
+//   &__item {
+//     padding: 0.5em;
+
+//     p {
+//       margin: 0;
+//       white-space: pre-wrap;
+//       word-wrap: break-word;
+//     }
+
+//     ul,
+//     ol {
+//       margin: 0.5em 0;
+//       padding-left: 1.5em;
+//     }
+
+//     code {
+//       background-color: rgba(vars.$color-gray700, 0.1);
+//       padding: 0.2em 0.4em;
+//       border-radius: 3px;
+//       font-family: monospace;
+//       width: 90%;
+//     }
+
+//     pre {
+//       background-color: rgba(vars.$color-gray700, 0.1);
+//       padding: 1em;
+//       border-radius: 4px;
+//       overflow-x: auto;
+//       margin: 0.5em 0;
+
+//       code {
+//         background-color: transparent;
+//         padding: 0;
+//       }
+//     }
+//   }
+
+//   &__item--user {
+//     align-self: flex-end;
+//     background-color: vars.$color-gray700;
+//     color: vars.$color-gray100;
+//     max-width: 60%;
+//   }
+
+//   &__item--response {
+//     align-self: flex-start;
+//     color: vars.$color-gray900;
+//     width: 100%;
+//     background-color: rgba(vars.$color-gray100, 0.5);
+//   }
+
+//   &__item--typing {
+//     padding: 1em;
+//     width: auto !important;
+//     min-width: 60px;
+//     max-width: 100px;
+//   }
+// }
+
+// .message-content {
+//   a {
+//     color: inherit;
+//     text-decoration: underline;
+
+//     &:hover {
+//       opacity: 0.8;
+//     }
+//   }
+// }
+
+// .typing-indicator {
+//   display: flex;
+//   gap: 4px;
+//   justify-content: center;
+
+//   span {
+//     width: 6px;
+//     height: 6px;
+//     border-radius: 50%;
+//     background-color: vars.$color-gray700;
+//     animation: typing 1.4s infinite ease-in-out;
+
+//     &:nth-child(1) {
+//       animation-delay: 0s;
+//     }
+//     &:nth-child(2) {
+//       animation-delay: 0.2s;
+//     }
+//     &:nth-child(3) {
+//       animation-delay: 0.4s;
+//     }
+//   }
+// }
+
+// @keyframes typing {
+//   0%,
+//   100% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(-10px);
+//   }
+// }
+
+// .message-wrapper {
+//   position: relative;
+//   display: flex;
+//   align-items: flex-start;
+//   gap: 0.5em;
+
+//   &:hover {
+//     .copy-button {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// .copy-button {
+//   position: absolute;
+//   top: 0.5em;
+//   right: 0.5em;
+//   background: transparent;
+//   border: none;
+//   cursor: pointer;
+//   padding: 0.25em;
+//   border-radius: 4px;
+//   opacity: 0;
+//   transition: all 0.2s ease;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: vars.$color-gray700;
+
+//   &:hover {
+//     background-color: rgba(vars.$color-gray700, 0.1);
+//   }
+
+//   &.copied {
+//     opacity: 1;
+//     color: vars.$color-green500;
+//     background-color: rgba(76, 175, 80, 0.1);
+//   }
+
+//   svg {
+//     width: 16px;
+//     height: 16px;
+//   }
+// }
+
+// .messages__item--response .message-content {
+//   padding-right: 2em;
+// }
+
+// body.dark-mode .messages__item--user {
+//   background-color: vars.$color-gray200;
+//   color: vars.$color-gray800;
+// }
+
+// body.dark-mode .messages__item--response {
+//   background-color: rgba(vars.$color-gray900, 0.5);
+//   color: vars.$color-gray50;
+// }
+
+// body.dark-mode .typing-indicator span {
+//   background-color: vars.$color-gray50;
+// }
+
+// body.dark-mode .copy-button {
+//   color: vars.$color-gray50;
+
+//   &:hover {
+//     background-color: rgba(vars.$color-gray50, 0.1);
+//   }
+
+//   &.copied {
+//     color: vars.$color-green500;
+//     background-color: rgba(76, 175, 80, 0.1);
+//   }
+// }

@@ -1,15 +1,18 @@
 @use '../abstracts/variables' as vars;
 
 .about {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1em;
   color: vars.$color-gray900;
+  border: 1px solid vars.$color-gray700;
 
   &__title {
     font-size: 2em;
+    border: 1px solid vars.$color-gray700;
   }
 
   &__section {
@@ -19,14 +22,17 @@
     align-items: center;
     padding: 1em;
     gap: 2em;
+    border: 1px solid vars.$color-gray700;
   }
 
   &__image {
     margin-top: 2em;
+    // border: 1px solid vars.$color-gray700;
   }
 
   &__description {
     max-width: 600px;
+    border: 1px solid vars.$color-gray700;
   }
 }
 

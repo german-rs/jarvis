@@ -7,10 +7,12 @@ import ThemeToggle from './components/ThemeToggle.vue'
 <template>
   <div class="app-container">
     <header class="header container">
-      <div>
+      <div class="header-left">
         <NavbarComponent />
       </div>
-      <ThemeToggle />
+      <div class="header-right">
+        <ThemeToggle />
+      </div>
     </header>
     <RouterView />
   </div>
@@ -30,5 +32,10 @@ import ThemeToggle from './components/ThemeToggle.vue'
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+  border: 1px solid #374151;
+}
+
+.header-left {
+  border: 1px solid red;
 }
 </style>

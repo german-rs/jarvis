@@ -1,5 +1,5 @@
 <template>
-  <div class="not-found">
+  <div class="not-found container">
     <h1 class="not-found__title">Página no encontrada</h1>
     <p class="not-found__message">Lo sentimos, pero la página que estás buscando no existe.</p>
     <p class="not-found__suggestion">

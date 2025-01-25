@@ -27,7 +27,7 @@ const handleSendMessage = async (messageContent) => {
 
 <template>
   <main class="home container">
-    <h1 class="home__title">Habla con Jarvis</h1>
+    <h1 class="home__title">¿Cómo puedo ayudar?</h1>
     <div class="home__chat-container">
       <ChatComponent :messages="messages" :isLoading="isLoading" />
     </div>
