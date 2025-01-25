@@ -5,6 +5,7 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
+  background-color: vars.$color-background-light;
   gap: 1em;
 
   &__item {
@@ -54,8 +55,8 @@
 
   &__item--user {
     align-self: flex-end;
-    background-color: vars.$color-gray700;
-    color: vars.$color-gray100;
+    background-color: vars.$color-messageUser-background-light;
+    color: vars.$color-messageUser-text-light;
     max-width: 60%;
 
     @media (max-width: 768px) {
@@ -67,7 +68,7 @@
     align-self: flex-start;
     color: vars.$color-gray900;
     width: 100%;
-    background-color: rgba(vars.$color-gray100, 0.5);
+    background-color: vars.$color-background-light;
 
     @media (max-width: 768px) {
       max-width: 90%;

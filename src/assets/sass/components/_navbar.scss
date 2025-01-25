@@ -5,26 +5,15 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-  border: 1px solid vars.$color-gray700;
+  border: 1px solid vars.$color-lines-light;
 
   &__icon {
     display: flex;
     align-items: center;
-    border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
 
-    img {
-      max-height: 40px;
-      width: auto;
-      animation: girar 8s linear infinite;
-    }
-
-    @keyframes girar {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(-45deg);
-      }
+    &--img {
+      width: 50px;
     }
   }
 
@@ -32,12 +21,12 @@
     list-style: none;
     padding: 1em;
     display: flex;
-    border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
   }
 
   &__item {
     margin-right: 20px;
-    border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
 
     &:last-child {
       margin-right: 0;
@@ -46,14 +35,14 @@
 
   &__link {
     text-decoration: none;
-    color: vars.$color-gray600;
+    color: vars.$color-navbar-text-light;
     font-weight: 600;
     transition: all 0.3s ease-in;
 
     &:hover {
       padding: 10px;
-      color: vars.$color-gray50;
-      background-color: vars.$color-gray900;
+      color: vars.$color-navbar-text-hover-light;
+      background-color: vars.$color-navbar-hover-light;
     }
   }
 

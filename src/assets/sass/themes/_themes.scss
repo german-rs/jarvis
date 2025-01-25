@@ -2,19 +2,21 @@
 @use '../abstracts/variables' as vars;
 
 $light-theme: (
-  background: vars.$color-gray100,
-  text: vars.$color-gray800,
-  primary: vars.$color-gray700,
-  secondary: vars.$color-gray600,
-  accent: vars.$color-green500,
+  background: vars.$color-background-light,
+  text: vars.$color-text-light,
+  primary: vars.$color-ivory,
+  secondary: vars.$color-brunswickGreen,
+  accent: vars.$color-mintGreen,
+  divider: vars.$color-brunswickGreen,
 );
 
 $dark-theme: (
-  background: vars.$color-gray900,
-  text: vars.$color-gray100,
-  primary: vars.$color-gray100,
-  secondary: vars.$color-gray200,
-  accent: vars.$color-green500,
+  background: vars.$color-background-dark,
+  text: vars.$color-text-dark,
+  primary: vars.$color-aquamarine,
+  secondary: vars.$color-richBlack,
+  accent: vars.$color-aquamarine,
+  divider: vars.$color-aquamarine,
 );
 
 @mixin theme($theme-map) {

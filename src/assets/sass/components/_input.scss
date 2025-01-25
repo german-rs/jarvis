@@ -8,7 +8,7 @@
   align-items: center;
   gap: 0.5em;
   padding: 1em;
-  border: 1px solid vars.$color-gray700;
+  border: 1px solid vars.$color-lines-light;
 
   &__input {
     outline: none;
@@ -18,7 +18,7 @@
     box-shadow: -3px 5px vars.$color-gray800;
     font-size: 18px;
     font-family: vars.$font-family;
-    background-color: vars.$color-gray50;
+    background-color: vars.$color-background-light;
     color: vars.$color-gray900;
     transition: all 0.3s ease-in-out;
   }

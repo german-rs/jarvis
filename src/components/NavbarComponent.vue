@@ -7,7 +7,7 @@ import BrandComponent from '@/components/BrandComponent.vue'
   <nav class="navbar">
     <div class="navbar__icon">
       <RouterLink to="/">
-        <BrandComponent :class="navbar__logo" />
+        <BrandComponent class="navbar__icon--img" />
       </RouterLink>
     </div>
     <ul class="navbar__list">
@@ -16,6 +16,9 @@ import BrandComponent from '@/components/BrandComponent.vue'
       </li>
       <li class="navbar__item">
         <RouterLink to="/about" class="navbar__link">Acerca</RouterLink>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">Accesibilidad</a>
       </li>
     </ul>
   </nav>

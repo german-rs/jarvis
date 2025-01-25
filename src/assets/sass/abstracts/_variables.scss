@@ -9,12 +9,77 @@ $color-gray700: #374151;
 $color-gray800: #1f2937;
 $color-gray900: #111827;
 $color-gray950: #030712;
-
 $color-red500: #ef4444;
 $color-green500: #22c55e;
 $color-orange400: #fb923c;
 $color-orange100: #ffedd5;
 
-$font-family: 'IBM Plex Sans', sans-serif;
+// Colors light mode
+$color-brunswickGreen: #1d4339;
+$color-darkGreen: #14302a;
+$color-ivory: #fafdeb;
+$color-mintGreen: #cff3eb;
+$color-richBlack: #161b21;
 
-$font-headers: 'IBM Plex Mono', monospace;
+// Colors dark mode
+$color-aquamarine: #6cf8c4;
+$color-viridian: #33755c;
+$color-night: #050e0c;
+
+// Light mode
+$color-background-light: $color-ivory;
+$color-header-light: $color-richBlack;
+$color-text-light: $color-richBlack;
+
+$color-messageUser-text-light: $color-ivory;
+$color-messageUser-background-light: $color-brunswickGreen;
+
+$color-button-background-light: $color-brunswickGreen;
+$color-button-text-light: $color-ivory;
+$color-button-background-hover-light: $color-darkGreen;
+$color-toggleButton-light: $color-brunswickGreen;
+
+$color-lines-light: $color-brunswickGreen;
+
+$color-navbar-text-light: $color-brunswickGreen;
+$color-navbar-hover-light: $color-brunswickGreen;
+$color-navbar-text-hover-light: $color-ivory;
+
+$color-integratedLink-background-light: $color-mintGreen;
+$color-integratedLink-text-light: $color-brunswickGreen;
+$color-integratedLink-bakground-hover-light: $color-brunswickGreen;
+$color-integratedLink-text-hover-light: $color-ivory;
+
+$color-normalLink-text-light: $color-brunswickGreen;
+$color-normalLink-text-hover-light: $color-richBlack;
+
+// Dark mode
+$color-background-dark: $color-richBlack;
+$color-header-dark: $color-ivory;
+$color-text-dark: $color-ivory;
+
+// $color-messageUser-text-dark: $color-ivory;
+// $color-messageUser-background-dark: $color-brunswickGreen;
+
+$color-button-background-dark: $color-aquamarine;
+$color-button-text-dark: $color-richBlack;
+$color-button-background-hover-dark: $color-viridian;
+$color-button-text-hover-dark: $color-ivory;
+$color-toggleButton-dark: $color-aquamarine;
+
+$color-lines-light: $color-aquamarine;
+
+$color-navbar-text-dark: $color-aquamarine;
+$color-navbar-hover-dark: $color-aquamarine;
+$color-navbar-text-hover-dark: $color-richBlack;
+
+$color-integratedLink-background-dark: $color-night;
+$color-integratedLink-text-dark: $color-aquamarine;
+$color-integratedLink-bakground-hover-dark: $color-aquamarine;
+$color-integratedLink-text-hover-dark: $color-richBlack;
+
+$color-normalLink-text-dark: $color-aquamarine;
+$color-normalLink-text-hover-dark: $color-ivory;
+
+$font-family: 'Inter', sans-serif;
+$font-headers: 'JetBrains Mono', monospace;

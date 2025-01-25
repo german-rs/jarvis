@@ -27,12 +27,12 @@
 
   &__image {
     margin-top: 2em;
-    // border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
   }
 
   &__description {
     max-width: 600px;
-    border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
   }
 }
 

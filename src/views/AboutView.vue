@@ -5,7 +5,7 @@ import BrandComponent from '@/components/BrandComponent.vue'
   <div class="about container">
     <h1 class="about__title">Acerca</h1>
     <section class="about__section">
-      <BrandComponent :class="about_image" />
+      <BrandComponent />
       <p class="about__description">
         Jarvis es un chat inteligente que utiliza la tecnología de Cohere para ofrecer servicios
         avanzados de procesamiento de lenguaje natural. Esta aplicación de mensajería, basada en

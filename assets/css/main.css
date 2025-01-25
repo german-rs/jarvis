@@ -1,37 +1,45 @@
 @import 'modern-normalize/modern-normalize.css';
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+/*  
+    ** Nueva UI **
+
+    Tema claro
+*/
+/*  
+    Tema oscuro
+*/
 h1 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
 
 h2 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
 
 h3 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
 
 h4 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
 
 h5 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
 
 h6 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: #374151;
 }
@@ -46,9 +54,9 @@ h6 {
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #1f2937;
-  background-color: #f3f4f6;
+  font-family: "Inter", sans-serif;
+  color: #161b21;
+  background-color: #fafdeb;
 }
 
 body,
@@ -63,7 +71,7 @@ html {
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  /* border: 1px solid red; */
+  border: 1px solid #374151;
 }
 
 /* xs */
@@ -128,37 +136,39 @@ html {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  border: 1px solid #1d4339;
 }
 .navbar__icon {
   display: flex;
   align-items: center;
+  border: 1px solid #1d4339;
 }
-.navbar__icon img {
-  max-height: 40px;
-  width: auto;
-  transition: opacity 0.3s ease;
+.navbar__icon--img {
+  width: 50px;
 }
 .navbar__list {
   list-style: none;
-  padding: 0;
+  padding: 1em;
   display: flex;
+  border: 1px solid #1d4339;
 }
 .navbar__item {
   margin-right: 20px;
+  border: 1px solid #1d4339;
 }
 .navbar__item:last-child {
   margin-right: 0;
 }
 .navbar__link {
   text-decoration: none;
-  color: #4b5563;
+  color: #1d4339;
   font-weight: 600;
   transition: all 0.3s ease-in;
 }
 .navbar__link:hover {
   padding: 10px;
-  color: #f8fafc;
-  background-color: #111827;
+  color: #fafdeb;
+  background-color: #1d4339;
 }
 body.dark-mode .navbar__link {
   color: #d1d5db;
@@ -170,7 +180,7 @@ body.dark-mode .navbar__link:hover {
 
 .chat-component {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -178,6 +188,7 @@ body.dark-mode .navbar__link:hover {
   overflow-y: auto;
   scrollbar-width: thin;
   padding-bottom: 50px;
+  border: 1px solid #374151;
 }
 
 .messages {
@@ -185,6 +196,7 @@ body.dark-mode .navbar__link:hover {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  background-color: #fafdeb;
   gap: 1em;
 }
 .messages__item {
@@ -218,17 +230,37 @@ body.dark-mode .navbar__link:hover {
   background-color: transparent;
   padding: 0;
 }
+@media (max-width: 768px) {
+  .messages__item {
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .messages__item {
+    font-size: 0.9em;
+  }
+}
 .messages__item--user {
   align-self: flex-end;
-  background-color: #374151;
-  color: #f3f4f6;
+  background-color: #1d4339;
+  color: #fafdeb;
   max-width: 60%;
+}
+@media (max-width: 768px) {
+  .messages__item--user {
+    max-width: 90%;
+  }
 }
 .messages__item--response {
   align-self: flex-start;
   color: #111827;
   width: 100%;
-  background-color: rgba(243, 244, 246, 0.5);
+  background-color: #fafdeb;
+}
+@media (max-width: 768px) {
+  .messages__item--response {
+    max-width: 90%;
+  }
 }
 .messages__item--typing {
   padding: 1em;
@@ -280,15 +312,13 @@ body.dark-mode .navbar__link:hover {
   display: flex;
   align-items: flex-start;
   gap: 0.5em;
+  border: 1px solid #374151;
 }
 .message-wrapper:hover .copy-button {
   opacity: 1;
 }
 
 .copy-button {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -300,6 +330,7 @@ body.dark-mode .navbar__link:hover {
   align-items: center;
   justify-content: center;
   color: #374151;
+  align-self: flex-end;
 }
 .copy-button:hover {
   background-color: rgba(55, 65, 81, 0.1);
@@ -313,9 +344,14 @@ body.dark-mode .navbar__link:hover {
   width: 16px;
   height: 16px;
 }
+@media (max-width: 480px) {
+  .copy-button {
+    display: none;
+  }
+}
 
 .messages__item--response .message-content {
-  padding-right: 2em;
+  padding-right: 0;
 }
 
 body.dark-mode .messages__item--user {
@@ -351,6 +387,7 @@ body.dark-mode .copy-button.copied {
   align-items: center;
   gap: 0.5em;
   padding: 1em;
+  border: 1px solid #1d4339;
 }
 .input-component__input {
   outline: none;
@@ -359,8 +396,8 @@ body.dark-mode .copy-button.copied {
   border: 2px solid #1f2937;
   box-shadow: -3px 5px #1f2937;
   font-size: 18px;
-  font-family: "IBM Plex Sans", sans-serif;
-  background-color: #f8fafc;
+  font-family: "Inter", sans-serif;
+  background-color: #fafdeb;
   color: #111827;
   transition: all 0.3s ease-in-out;
 }
@@ -374,9 +411,9 @@ body.dark-mode .input-component__input {
 
 .theme-toggle {
   background: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
+  border: 1px solid #374151;
 }
 .theme-toggle__icon {
   display: flex;
@@ -386,7 +423,7 @@ body.dark-mode .input-component__input {
   height: 24px;
 }
 .theme-toggle__icon--sun {
-  fill: #1f2937;
+  fill: #1d4339;
 }
 .theme-toggle__icon--moon {
   fill: #f3f4f6;
@@ -402,7 +439,7 @@ body.dark-mode .input-component__input {
   border: 2px solid #1f2937;
   color: #1f2937;
   background-color: #e5e7eb;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
@@ -435,10 +472,13 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
   padding: 1em;
   gap: 1em;
   overflow: hidden;
+  border: 1px solid #1d4339;
 }
 .home__title {
   text-align: center;
+  font-size: 30px;
   color: #374151;
+  border: 1px solid #1d4339;
 }
 .home__chat-container {
   position: relative;
@@ -447,7 +487,8 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: #f3f4f6;
+  background-color: #fafdeb;
+  border: 1px solid #1d4339;
 }
 .home__input-container {
   position: sticky;
@@ -457,7 +498,7 @@ body.dark-mode .btn:hover, body.dark-mode .not-found__button:hover {
   z-index: 10;
   display: flex;
   justify-content: center;
-  background-color: #f3f4f6;
+  background-color: #fafdeb;
 }
 
 body.dark-mode .home__title {
@@ -473,15 +514,18 @@ body.dark-mode .home__input-container {
 }
 
 .about {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1em;
   color: #111827;
+  border: 1px solid #374151;
 }
 .about__title {
   font-size: 2em;
+  border: 1px solid #374151;
 }
 .about__section {
   display: flex;
@@ -490,12 +534,15 @@ body.dark-mode .home__input-container {
   align-items: center;
   padding: 1em;
   gap: 2em;
+  border: 1px solid #374151;
 }
 .about__image {
   margin-top: 2em;
+  border: 1px solid #1d4339;
 }
 .about__description {
   max-width: 600px;
+  border: 1px solid #1d4339;
 }
 
 body.dark-mode .about {
@@ -514,13 +561,17 @@ body.dark-mode .about__description {
   text-align: center;
   padding: 2em;
   color: #1f2937;
+  border: 1px solid #374151;
+  height: 100vh;
 }
 .not-found__title {
   font-size: 2em;
   margin-bottom: 0.5em;
+  border: 1px solid #374151;
 }
 .not-found__message, .not-found__suggestion {
   margin: 0.5em 0;
+  border: 1px solid #374151;
 }
 .not-found__link {
   color: #030712;
@@ -548,18 +599,18 @@ body.dark-mode .not-found__link {
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
-  background-color: #f3f4f6;
-  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  background-color: #fafdeb;
+  color: #161b21;
 }
 body .primary {
-  color: #374151;
+  color: #fafdeb;
 }
 body .secondary {
-  color: #4b5563;
+  color: #1d4339;
 }
 body .accent {
-  color: #22c55e;
+  color: #cff3eb;
 }
 
 body.dark-mode {

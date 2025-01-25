@@ -32,7 +32,7 @@ export default {
 
 @keyframes girarEscalar {
   50% {
-    transform: rotate(var(--rotate)) scale(0.9);
+    transform: rotate(var(--rotate)) scale(0.8);
   }
   100% {
     transform: rotate(var(--rotate-end)) scale(1);

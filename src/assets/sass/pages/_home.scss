@@ -8,13 +8,13 @@
   padding: 1em;
   gap: 1em;
   overflow: hidden;
-  border: 1px solid vars.$color-gray700;
+  border: 1px solid vars.$color-lines-light;
 
   &__title {
     text-align: center;
     font-size: 30px;
     color: vars.$color-gray700;
-    border: 1px solid vars.$color-gray700;
+    border: 1px solid vars.$color-lines-light;
   }
 
   &__chat-container {
@@ -24,8 +24,8 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background-color: vars.$color-gray100;
-    border: 1px solid vars.$color-gray700;
+    background-color: vars.$color-background-light;
+    border: 1px solid vars.$color-lines-light;
   }
 
   &__input-container {
@@ -36,7 +36,7 @@
     z-index: 10;
     display: flex;
     justify-content: center;
-    background-color: vars.$color-gray100;
+    background-color: vars.$color-background-light;
   }
 }
 
