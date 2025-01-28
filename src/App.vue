@@ -7,11 +7,13 @@ import ThemeToggle from './components/ThemeToggle.vue'
 <template>
   <div class="app-container">
     <header class="header container">
-      <div class="header-left">
+      <div class="header__wrapper">
+        <div class="header-left">
         <NavbarComponent />
-      </div>
+        </div>
       <div class="header-right">
         <ThemeToggle />
+      </div>
       </div>
     </header>
     <RouterView />
@@ -24,18 +26,5 @@ import ThemeToggle from './components/ThemeToggle.vue'
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  border: 1px solid #374151;
-}
-
-.header-left {
-  border: 1px solid red;
 }
 </style>

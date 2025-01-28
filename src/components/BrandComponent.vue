@@ -2,6 +2,7 @@
   <img src="../../public/jarvis_logo.webp" alt="Imagen" class="animar" />
 </template>
 
+<!-- https://codepen.io/cmlohr/pen/NWdKrzr -->
 <script>
 export default {
   props: {

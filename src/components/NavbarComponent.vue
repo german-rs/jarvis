@@ -22,4 +22,6 @@ import BrandComponent from '@/components/BrandComponent.vue'
       </li>
     </ul>
   </nav>
+  
 </template>
+

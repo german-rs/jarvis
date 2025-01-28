@@ -185,14 +185,19 @@
   padding-right: 0;
 }
 
+
+body.dark-mode .messages {
+  background-color: vars.$color-background-dark;
+}
+
 body.dark-mode .messages__item--user {
-  background-color: vars.$color-gray200;
-  color: vars.$color-gray800;
+  background-color: vars.$color-messageUser-text-dark;
+  color: vars.$color-messageUser-background-dark;
 }
 
 body.dark-mode .messages__item--response {
   background-color: rgba(vars.$color-gray900, 0.5);
-  color: vars.$color-gray50;
+  color: vars.$color-messageResponse-text-dark;
 }
 
 body.dark-mode .typing-indicator span {

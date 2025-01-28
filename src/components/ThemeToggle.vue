@@ -25,7 +25,7 @@ onMounted(() => {
     <span class="theme-toggle__check">
       <span class="theme-toggle__icon">
         <svg
-          v-if="!isDarkMode"
+          v-if="isDarkMode"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           focusable="false"

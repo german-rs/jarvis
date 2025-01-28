@@ -10,6 +10,7 @@
   overflow: hidden;
   border: 1px solid vars.$color-lines-light;
 
+  
   &__title {
     text-align: center;
     font-size: 30px;
@@ -45,7 +46,7 @@ body.dark-mode .home__title {
 }
 
 body.dark-mode .home__chat-container {
-  background-color: vars.$color-gray900;
+  background-color: vars.$color-background-dark;
 }
 
 body.dark-mode .home__input-container {

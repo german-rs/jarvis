@@ -15,11 +15,11 @@
     height: 24px;
 
     &--sun {
-      fill: vars.$color-toggleButton-light;
+      fill: vars.$color-toggleButton-dark;
     }
 
     &--moon {
-      fill: vars.$color-gray100;
+      fill: vars.$color-toggleButton-light;
     }
   }
 }
