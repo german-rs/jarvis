@@ -2,18 +2,20 @@
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1em;
+
 
   &__icon {
     display: flex;
     align-items: center;
 
     &--img {
-      width: 50px;
+      width: 45px;
     }
   }
+
 
   &__list {
     padding: 0;
@@ -26,11 +28,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin-right: 1em;
-    
     border-right: 2px solid vars.$color-lines-light;
     
-
     &:last-child {
       margin-right: 0;
       border: none;
@@ -42,7 +41,7 @@
   &__link {
     text-decoration: none;
     color: vars.$color-navbar-text-light;
-    font-weight: 600;
+    font-weight: 500;
     padding: 1em;
     transition: all 0.3s ease-in;
 

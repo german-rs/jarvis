@@ -2,10 +2,9 @@
 
 .theme-toggle {
   background: transparent;
-  // border: none;
+  border: none;
   cursor: pointer;
   padding: 0;
-  border: 1px solid vars.$color-gray700;
 
   &__icon {
     display: flex;
@@ -22,6 +21,7 @@
       fill: vars.$color-toggleButton-light;
     }
   }
+
 }
 
 .theme-toggle--appearance {

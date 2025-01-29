@@ -1,17 +1,17 @@
 @use '../abstracts/variables' as vars;
 
 .header {
-    padding: 1em;
 
+  padding: 1em 0;
+  
     &__wrapper{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-         gap: 1em;
+        gap: 1em;
         border: 2px solid vars.$color-lines-light;
     }
-
     
   }
 

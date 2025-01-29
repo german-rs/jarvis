@@ -10,18 +10,19 @@ import BrandComponent from '@/components/BrandComponent.vue'
         <BrandComponent class="navbar__icon--img" />
       </RouterLink>
     </div>
+    
     <ul class="navbar__list">
       <li class="navbar__item">
-        <RouterLink to="/" class="navbar__link">Inicio</RouterLink>
+        <RouterLink to="/" class="navbar__link">INICIO</RouterLink>
       </li>
       <li class="navbar__item">
-        <RouterLink to="/about" class="navbar__link">Acerca</RouterLink>
+        <RouterLink to="/about" class="navbar__link">ACERCA</RouterLink>
       </li>
       <li class="navbar__item">
-        <a href="#" class="navbar__link">Accesibilidad</a>
+        <a href="#" class="navbar__link">ACCESIBILIDAD</a>
       </li>
     </ul>
   </nav>
-  
+
 </template>
 

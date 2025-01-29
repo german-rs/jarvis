@@ -6,8 +6,8 @@ import ThemeToggle from './components/ThemeToggle.vue'
 
 <template>
   <div class="app-container">
-    <header class="header container">
-      <div class="header__wrapper">
+    <header class="header ">
+      <div class="header__wrapper container">
         <div class="header-left">
         <NavbarComponent />
         </div>
