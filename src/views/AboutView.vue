@@ -14,6 +14,7 @@ import BrandComponent from '@/components/BrandComponent.vue'
     </div>
 
 
+    
     <div class="about__section-description">
 
       <div class="about__title-wrapper">

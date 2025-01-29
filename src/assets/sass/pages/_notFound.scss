@@ -3,27 +3,30 @@
 @use '../components/button';
 
 .not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 2em;
-  color: vars.$color-gray800;
-  border: 1px solid vars.$color-gray700;
+  border: 2px solid vars.$color-lines-light;
   height: 100vh;
 
+  &__wrapper{
+
+  }
+
+  &__img img{
+    width: 100px;
+  }
+
+  &__number{
+    font-size: 8em;
+    font-family: vars.$font-headers;
+  }
+
   &__title {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 0.5em;
-    border: 1px solid vars.$color-gray700;
-  }
-
-  &__message,
-  &__suggestion {
-    margin: 0.5em 0;
-    border: 1px solid vars.$color-gray700;
-  }
-
-  &__link {
-    color: vars.$color-gray950;
-    text-decoration: underline;
   }
 
   &__button {

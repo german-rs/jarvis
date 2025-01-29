@@ -6,7 +6,6 @@
   align-items: center;
   gap: 1em;
 
-
   &__icon {
     display: flex;
     align-items: center;
@@ -36,8 +35,6 @@
     }
   }
 
-
-
   &__link {
     text-decoration: none;
     color: vars.$color-navbar-text-light;
@@ -51,14 +48,24 @@
     }
   }
 
+
   body.dark-mode & {
     &__link {
-      color: vars.$color-gray300;
+      color: vars.$color-navbar-text-dark;
 
       &:hover {
-        color: vars.$color-gray900;
-        background-color: vars.$color-gray50;
+        color: vars.$color-navbar-text-hover-dark;
+        background-color: vars.$color-navbar-background-hover-dark;
       }
     }
+
+    &__list {
+      border-left: 2px solid vars.$color-lines-dark;
+    }
+
+    &__item {
+      border-right: 2px solid vars.$color-lines-dark;
+    }
+
   }
 }

@@ -25,6 +25,7 @@ const handleSendMessage = async (messageContent) => {
 }
 </script>
 
+
 <template>
   <main class="home container">
     <h1 class="home__title">¿Cómo puedo ayudar?</h1>

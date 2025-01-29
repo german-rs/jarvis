@@ -2,32 +2,27 @@
 
 .btn {
   padding: 1em 2em;
-  border: 2px solid vars.$color-gray800;
-  color: vars.$color-gray800;
-  background-color: vars.$color-gray200;
+  color: vars.$color-button-text-light;
+  background-color: vars.$color-button-background-light;
   font-family: vars.$font-family;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  box-shadow: -3px 5px vars.$color-gray800;
   transition: all 0.7s ease;
 
   &:hover {
-    background-color: vars.$color-gray800;
-    color: vars.$color-gray50;
+    background-color: vars.$color-button-background-hover-light;
   }
 }
 
 body.dark-mode .btn {
-  border-color: vars.$color-gray200;
-  color: vars.$color-gray200;
-  background-color: vars.$color-gray800;
-  box-shadow: -3px 5px vars.$color-gray200;
+  color: vars.$color-button-text-dark;
+  background-color: vars.$color-button-background-dark;
 
   &:hover {
-    background-color: vars.$color-gray200;
-    color: vars.$color-gray800;
+    background-color: vars.$color-button-background-hover-dark;
+    color: vars.$color-button-text-hover-dark;
   }
 }

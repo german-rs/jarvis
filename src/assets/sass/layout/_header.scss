@@ -19,5 +19,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 0.4em;
   }
   
+  body.dark-mode .header__wrapper {
+      border: 2px solid vars.$color-lines-dark;
+  }

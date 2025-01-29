@@ -2,20 +2,20 @@
 
 .input-component {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
   padding: 1em;
-  border: 1px solid vars.$color-lines-light;
+  border: 2px solid vars.$color-lines-light;
+
 
   &__input {
     outline: none;
     flex: 1;
     padding: 0.5em;
-    border: 2px solid vars.$color-gray800;
-    box-shadow: -3px 5px vars.$color-gray800;
+    border: 2px solid vars.$color-lines-light;
     font-size: 18px;
     font-family: vars.$font-family;
     background-color: vars.$color-background-light;
@@ -26,7 +26,10 @@
 
 body.dark-mode .input-component__input {
   background-color: vars.$color-gray900;
-  color: vars.$color-gray50;
-  border-color: vars.$color-gray50;
-  box-shadow: -3px 5px vars.$color-gray50;
+  color: vars.$color-text-dark;
+  border-color: vars.$color-lines-dark;
+}
+
+body.dark-mode .input-component {
+  border-color: vars.$color-lines-dark;
 }

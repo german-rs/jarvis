@@ -1,8 +1,7 @@
 <template>
-  <img src="../../public/jarvis_logo.webp" alt="Imagen" class="animar" />
+  <img src="../../public/jarvis_2.svg" alt="Imagen" class="animar" />
 </template>
 
-<!-- https://codepen.io/cmlohr/pen/NWdKrzr -->
 <script>
 export default {
   props: {
@@ -39,4 +38,13 @@ export default {
     transform: rotate(var(--rotate-end)) scale(1);
   }
 }
+
+body.dark-mode .animar {
+filter: brightness(0.5) contrast(2) saturate(0);
+filter: brightness(0.5) contrast(2) saturate(0) invert(77%) sepia(29%) saturate(1237%) hue-rotate(103deg) brightness(101%) contrast(101%);
+}
+
 </style>
+
+
+<!-- https://codepen.io/cmlohr/pen/NWdKrzr -->

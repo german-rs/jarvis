@@ -3,42 +3,48 @@
 .home {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: calc(100vh - 70px);
   position: relative;
   padding: 1em;
   gap: 1em;
   overflow: hidden;
-  border: 1px solid vars.$color-lines-light;
+  border: 2px solid vars.$color-lines-light;
 
   
   &__title {
     text-align: center;
     font-size: 30px;
-    color: vars.$color-gray700;
-    border: 1px solid vars.$color-lines-light;
+    color: vars.$color-header-light;
   }
 
   &__chat-container {
     position: relative;
     width: 100%;
+    max-width: 1000px;
     flex: 1;
     overflow: hidden;
     display: flex;
     justify-content: center;
     background-color: vars.$color-background-light;
-    border: 1px solid vars.$color-lines-light;
+    border: 2px solid vars.$color-lines-light;
   }
 
+  
   &__input-container {
     position: sticky;
     bottom: 0;
     width: 100%;
-    padding: 0.5em;
     z-index: 10;
     display: flex;
     justify-content: center;
     background-color: vars.$color-background-light;
   }
+}
+
+body.dark-mode .home {
+  border: 2px solid vars.$color-lines-dark;
 }
 
 body.dark-mode .home__title {
@@ -47,6 +53,7 @@ body.dark-mode .home__title {
 
 body.dark-mode .home__chat-container {
   background-color: vars.$color-background-dark;
+  border: 2px solid vars.$color-lines-dark;
 }
 
 body.dark-mode .home__input-container {

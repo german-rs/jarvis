@@ -1,12 +1,19 @@
+<script setup>
+import BrandComponent from '@/components/BrandComponent.vue'
+</script>
+
 <template>
-  <div class="not-found container">
-    <h1 class="not-found__title">Página no encontrada</h1>
-    <p class="not-found__message">Lo sentimos, pero la página que estás buscando no existe.</p>
-    <p class="not-found__suggestion">
-      Puedes volver a la
-      <router-link to="/" class="not-found__link">página principal</router-link> o explorar otras
-      secciones de nuestro sitio.
-    </p>
-    <router-link to="/" class="not-found__button">Volver a la página principal</router-link>
-  </div>
+  <main class="not-found container">
+    <div class="not-found__wrapper" >
+      <div class="not-found__img">
+        <BrandComponent />
+      </div>
+      <p class="not-found__number">404</p>
+      <h1 class="not-found__title">Página no encontrada</h1>
+      <router-link to="/" class="not-found__button">VOLVER A LA PÁGINA PRINCIPAL</router-link>
+    </div>
+  </main>
+
+
 </template>
+
