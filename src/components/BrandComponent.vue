@@ -40,11 +40,7 @@ export default {
 }
 
 body.dark-mode .animar {
-filter: brightness(0.5) contrast(2) saturate(0);
-filter: brightness(0.5) contrast(2) saturate(0) invert(77%) sepia(29%) saturate(1237%) hue-rotate(103deg) brightness(101%) contrast(101%);
+  filter: brightness(0.5) contrast(2) saturate(0) invert(77%) sepia(29%) saturate(1237%)
+    hue-rotate(103deg) brightness(101%) contrast(101%);
 }
-
 </style>
-
-
-<!-- https://codepen.io/cmlohr/pen/NWdKrzr -->

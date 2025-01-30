@@ -14,10 +14,8 @@ $color-green500: #22c55e;
 $color-orange400: #fb923c;
 $color-orange100: #ffedd5;
 
-
-
 // Colors light mode
-$color-brunswickGreen: #214B43;
+$color-brunswickGreen: #214b43;
 $color-darkGreen: #14302a;
 $color-ivory: #fafdeb;
 $color-mintGreen: #cff3eb;
@@ -60,17 +58,17 @@ $color-background-dark: $color-richBlack;
 $color-header-dark: $color-ivory;
 $color-text-dark: $color-ivory;
 
-$color-messageUser-text-dark: $color-aquamarine;//*
-$color-messageUser-background-dark: $color-night;//*
+$color-messageUser-text-dark: $color-aquamarine; //*
+$color-messageUser-background-dark: $color-night; //*
 $color-messageResponse-text-dark: $color-ivory;
 // $color-messageResponse-background-dark: ;
+$color-typingIndicator-dark: $color-aquamarine;
 
 $color-button-background-dark: $color-aquamarine;
 $color-button-text-dark: $color-richBlack;
 $color-button-background-hover-dark: $color-viridian;
 $color-button-text-hover-dark: $color-ivory;
 $color-toggleButton-dark: $color-aquamarine;
-
 
 $color-lines-dark: $color-aquamarine;
 
@@ -88,4 +86,3 @@ $color-normalLink-text-hover-dark: $color-ivory;
 
 $font-family: 'Inter', sans-serif;
 $font-headers: 'JetBrains Mono', monospace;
-

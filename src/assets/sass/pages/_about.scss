@@ -92,6 +92,14 @@
     border-right: 2px solid vars.$color-lines-light;
   }
 
+  body.dark-mode .about .about__title-wrapper {
+    border-top: none;
+  }
+
+  body.dark-mode .about__section-img {
+    border-right: 2px solid vars.$color-lines-dark;
+  }
+
 } 
 
 body.dark-mode .about {

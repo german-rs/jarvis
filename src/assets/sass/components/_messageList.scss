@@ -9,7 +9,6 @@
   border: none;
   gap: 1em;
 
-
   &__item {
     padding: 0.5em;
 
@@ -158,7 +157,6 @@
   align-items: center;
   justify-content: center;
   color: vars.$color-gray700;
-  // align-self: flex-end;
 
   &:hover {
     background-color: rgba(vars.$color-gray700, 0.1);
@@ -184,7 +182,6 @@
   padding-right: 0;
 }
 
-
 body.dark-mode .messages {
   background-color: vars.$color-background-dark;
 }
@@ -200,7 +197,7 @@ body.dark-mode .messages__item--response {
 }
 
 body.dark-mode .typing-indicator span {
-  background-color: vars.$color-gray50;
+  background-color: vars.$color-typingIndicator-dark;
 }
 
 body.dark-mode .copy-button {

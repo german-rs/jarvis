@@ -48,7 +48,7 @@ body.dark-mode .home {
 }
 
 body.dark-mode .home__title {
-  color: vars.$color-gray200;
+  color: vars.$color-header-dark;
 }
 
 body.dark-mode .home__chat-container {
@@ -57,5 +57,5 @@ body.dark-mode .home__chat-container {
 }
 
 body.dark-mode .home__input-container {
-  background-color: vars.$color-gray900;
+  background-color: vars.$color-background-dark;
 }

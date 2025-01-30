@@ -4,11 +4,11 @@
 
 ## Chat Inteligente con Cohere
 
-El **Proyecto de Chat Inteligente con Cohere** es una innovadora aplicación de mensajería basada en inteligencia artificial, diseñada para facilitar la comunicación fluida y efectiva entre los usuarios y un asistente virtual inteligente. Este proyecto integra servicios avanzados de procesamiento de lenguaje natural (NLP) proporcionados por **Cohere**, una plataforma líder en tecnología de IA.
+El **Proyecto Jarvis** es una aplicación de mensajería basada en inteligencia artificial, diseñada para facilitar la comunicación entre los usuarios y un asistente virtual inteligente. Este proyecto integra servicios avanzados de procesamiento de lenguaje natural (NLP) proporcionados por **Cohere**, una plataforma líder en tecnología de IA.
 
 ## Objetivos del Proyecto
 
-1. **Interacción Natural**: Crear una interfaz de chat que permita a los usuarios interactuar de manera natural y conversacional con el asistente virtual, replicando la fluidez de una conversación humana.
+1. **Interacción Natural**: Crear una interfaz de chat que permita a los usuarios interactuar de manera natural y conversacional con el asistente virtual, replicando la fluidez de una conversación humana. A largo plazo, la idea es incluir otros modelos de IA para poder analizar las respuestas que entregan según el mismo prompt.
 2. **Asistencia Automatizada**: Ofrecer asistencia automatizada en tiempo real para responder preguntas, proporcionar información útil y ayudar en diversas tareas, mejorando la eficiencia y la experiencia del usuario.
 3. **Escalabilidad y Rendimiento**: Asegurar que el sistema sea escalable y capaz de manejar múltiples conversaciones simultáneamente, manteniendo un rendimiento óptimo.
 
