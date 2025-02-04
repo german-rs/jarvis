@@ -27,22 +27,19 @@
     code {
       background-color: rgba(vars.$color-gray700, 0.1);
       padding: 0.2em 0.4em;
-      border-radius: 3px;
-      font-family: monospace;
-      width: 90%;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.9em;
+      color: vars.$color-gray900;
     }
 
-    pre {
+    :not(pre) > code {
       background-color: rgba(vars.$color-gray700, 0.1);
-      padding: 1em;
+      padding: 0.2em 0.4em;
       border-radius: 4px;
-      overflow-x: auto;
-      margin: 0.5em 0;
-
-      code {
-        background-color: transparent;
-        padding: 0;
-      }
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.9em;
+      color: vars.$color-gray900;
     }
 
     @media (max-width: 768px) {
@@ -178,37 +175,43 @@
   }
 }
 
-.messages__item--cohere .message-content {
-  padding-right: 0;
-}
-
-body.dark-mode .messages {
-  background-color: vars.$color-background-dark;
-}
-
-body.dark-mode .messages__item--user {
-  background-color: vars.$color-messageUser-text-dark;
-  color: vars.$color-messageUser-background-dark;
-}
-
-body.dark-mode .messages__item--cohere {
-  background-color: rgba(vars.$color-gray900, 0.5);
-  color: vars.$color-messageResponse-text-dark;
-}
-
-body.dark-mode .typing-indicator span {
-  background-color: vars.$color-typingIndicator-dark;
-}
-
-body.dark-mode .copy-button {
-  color: vars.$color-gray50;
-
-  &:hover {
-    background-color: rgba(vars.$color-gray50, 0.1);
+// Modo oscuro simplificado
+body.dark-mode {
+  .messages {
+    background-color: vars.$color-background-dark;
   }
 
-  &.copied {
-    color: vars.$color-green500;
-    background-color: rgba(76, 175, 80, 0.1);
+  .messages__item {
+    code {
+      background-color: rgba(vars.$color-gray900, 0.3);
+      color: vars.$color-gray50;
+    }
+  }
+
+  .messages__item--user {
+    background-color: vars.$color-messageUser-text-dark;
+    color: vars.$color-messageUser-background-dark;
+  }
+
+  .messages__item--cohere {
+    background-color: rgba(vars.$color-gray900, 0.5);
+    color: vars.$color-messageResponse-text-dark;
+  }
+
+  .typing-indicator span {
+    background-color: vars.$color-typingIndicator-dark;
+  }
+
+  .copy-button {
+    color: vars.$color-gray50;
+
+    &:hover {
+      background-color: rgba(vars.$color-gray50, 0.1);
+    }
+
+    &.copied {
+      color: vars.$color-green500;
+      background-color: rgba(76, 175, 80, 0.1);
+    }
   }
 }

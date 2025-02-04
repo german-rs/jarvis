@@ -10,7 +10,6 @@
   padding: 1em;
   border: 2px solid vars.$color-lines-light;
 
-
   &__input {
     outline: none;
     flex: 1;
@@ -19,13 +18,13 @@
     font-size: 18px;
     font-family: vars.$font-family;
     background-color: vars.$color-background-light;
-    color: vars.$color-gray900;
+    color: vars.$color-text-light;
     transition: all 0.3s ease-in-out;
   }
 }
 
 body.dark-mode .input-component__input {
-  background-color: vars.$color-gray900;
+  background-color: vars.$color-background-dark;
   color: vars.$color-text-dark;
   border-color: vars.$color-lines-dark;
 }

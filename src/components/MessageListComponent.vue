@@ -1,6 +1,7 @@
 <script setup>
 import { marked } from 'marked'
 import { ref } from 'vue'
+import CodeBlockComponent from './CodeBlockComponent.vue'
 
 defineProps({
   messages: {
@@ -26,10 +27,6 @@ marked.setOptions({
   gfm: true,
 })
 
-const processMessage = (content) => {
-  return marked(content || '')
-}
-
 const copyToClipboard = async (message, index) => {
   try {
     await navigator.clipboard.writeText(message.content)
@@ -41,13 +38,75 @@ const copyToClipboard = async (message, index) => {
     console.error('Failed to copy text:', err)
   }
 }
+
+const messageCache = new Map()
+
+const processMessage = (content) => {
+  if (!content) return { isCode: false, content: '' }
+
+  const cached = messageCache.get(content)
+  if (cached) return cached
+
+  // Regex mejorado para detectar bloques de código
+  const codeBlockRegex = /^```\s*(\w+)?\s*\n([\s\S]+?)\n```/gm
+  const match = codeBlockRegex.exec(content)
+
+  if (match) {
+    const langMap = {
+      js: 'javascript',
+      py: 'python',
+      ts: 'typescript',
+      cpp: 'cpp',
+      'c++': 'cpp',
+      sh: 'bash',
+      shell: 'bash',
+      md: 'markdown',
+      json: 'json',
+      java: 'java',
+      html: 'markup',
+      xml: 'markup',
+      css: 'css',
+      '': 'plaintext',
+      text: 'plaintext',
+      plain: 'plaintext',
+    }
+
+    const rawLang = (match[1] || 'plaintext').toLowerCase()
+    const lang = langMap[rawLang] || rawLang
+    const code = match[2].trim()
+
+    const result = {
+      isCode: true,
+      language: lang,
+      content: code,
+    }
+
+    messageCache.set(content, result)
+    return result
+  }
+
+  const result = {
+    isCode: false,
+    content: marked(content || ''),
+  }
+
+  messageCache.set(content, result)
+  return result
+}
 </script>
 
 <template>
   <div class="messages container">
     <div v-for="(message, index) in messages" :key="index" :class="messageClass(message.type)">
       <div class="message-wrapper">
-        <div class="message-content" v-html="processMessage(message.content)"></div>
+        <template v-if="processMessage(message.content).isCode">
+          <CodeBlockComponent
+            :code="processMessage(message.content).content"
+            :language="processMessage(message.content).language"
+          />
+        </template>
+        <div v-else class="message-content" v-html="processMessage(message.content).content" />
+
         <button
           v-if="message.type !== 'user'"
           class="copy-button"
@@ -56,35 +115,10 @@ const copyToClipboard = async (message, index) => {
           :aria-label="copiedMessageId === index ? 'Copiado!' : 'Copiar mensaje'"
         >
           <span class="copy-icon" v-if="copiedMessageId !== index">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
+            <!-- SVG del icono de copiar -->
           </span>
           <span class="check-icon" v-else>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
+            <!-- SVG del icono de check -->
           </span>
         </button>
       </div>
