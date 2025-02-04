@@ -65,7 +65,7 @@
     }
   }
 
-  &__item--response {
+  &__item--cohere {
     align-self: flex-start;
     color: vars.$color-gray900;
     width: 100%;
@@ -178,7 +178,7 @@
   }
 }
 
-.messages__item--response .message-content {
+.messages__item--cohere .message-content {
   padding-right: 0;
 }
 
@@ -191,7 +191,7 @@ body.dark-mode .messages__item--user {
   color: vars.$color-messageUser-background-dark;
 }
 
-body.dark-mode .messages__item--response {
+body.dark-mode .messages__item--cohere {
   background-color: rgba(vars.$color-gray900, 0.5);
   color: vars.$color-messageResponse-text-dark;
 }

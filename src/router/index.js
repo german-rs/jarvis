@@ -8,7 +8,7 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
-      title: 'Jarvis I.A. | Inicio',
+      title: 'LLarvis I.A. | Inicio',
     },
   },
   {
@@ -16,7 +16,7 @@ const routes = [
     name: 'about',
     component: () => import('../views/AboutView.vue'),
     meta: {
-      title: 'Jarvis I.A. | Acerca de Jarvis',
+      title: 'LLarvis I.A. | Acerca de Jarvis',
     },
   },
   {
@@ -24,7 +24,7 @@ const routes = [
     name: 'not-found',
     component: NotFoundView,
     meta: {
-      title: 'Jarvis I.A. | Página No Encontrada',
+      title: 'LLarvis I.A. | Página No Encontrada',
     },
   },
 ]
@@ -35,7 +35,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Jarvis I.A.'
+  document.title = to.meta.title || 'LLarvis I.A.'
   next()
 })
 

@@ -15,6 +15,13 @@
     }
   }
 
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
 
   &__list {
     padding: 0;
@@ -23,12 +30,13 @@
     border-left: 2px solid vars.$color-lines-light;
     border-right: 2px solid vars.$color-lines-light;
   }
+
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
     border-right: 2px solid vars.$color-lines-light;
-    
+
     &:last-child {
       margin-right: 0;
       border: none;
@@ -48,6 +56,13 @@
     }
   }
 
+  &__desktop-menu {
+    display: block;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 
   body.dark-mode & {
     &__link {
@@ -66,6 +81,94 @@
     &__item {
       border-right: 2px solid vars.$color-lines-dark;
     }
+  }
 
+  @media (max-width: 768px) {
+    align-items: flex-start;
+
+    &__toggle {
+      display: block;
+      color: vars.$color-lines-light;
+      padding: 0 0.2em;
+    }
+
+    &__modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    &__modal-content {
+      background-color: #fff;
+      padding: 2em;
+      // border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    &__modal-close {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      background: none;
+      color: vars.$color-lines-light;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    &__list {
+      flex-direction: column;
+      border: none;
+      width: 100%;
+      display: flex;
+    }
+
+    &__item {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid vars.$color-lines-light;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &__link {
+      width: 100%;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    body.dark-mode & {
+      &__toggle {
+        color: vars.$color-lines-dark;
+      }
+
+      &__modal-content {
+        background-color: vars.$color-background-dark;
+      }
+
+      &__modal-close {
+        color: vars.$color-lines-dark;
+      }
+
+      .navbar__modal .navbar__list {
+        border-left: none;
+        border-right: none;
+      }
+
+      &__item {
+        border-right: none;
+      }
+    }
   }
 }
