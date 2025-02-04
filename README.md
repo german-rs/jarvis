@@ -19,6 +19,6 @@ El **Proyecto Jarvis** es una aplicación de mensajería basada en inteligencia 
 3. **Gestión de Estado**: Implementación de Vuex para la gestión eficiente del estado de la aplicación, asegurando que los mensajes se almacenen y se muestren correctamente.
 4. **Estilización y Responsividad**: Utilización de la arquitectura 7-1 de Sass para estructurar y mantener los estilos de la aplicación, garantizando una experiencia de usuario consistente en todos los dispositivos.
 
-## Ver vídeo de Jarvis 1.0.
+## Ver vídeo de Jarvis vesión 1.0.
 
 [![Ver video](https://img.youtube.com/vi/J_GdCe9y4mg/0.jpg)](https://www.youtube.com/watch?v=J_GdCe9y4mg)

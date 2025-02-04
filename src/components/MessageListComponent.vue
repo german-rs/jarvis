@@ -18,7 +18,7 @@ const copiedMessageId = ref(null)
 const messageClass = (type) => {
   return type === 'user'
     ? 'messages__item messages__item--user'
-    : 'messages__item messages__item--response'
+    : 'messages__item messages__item--cohere'
 }
 
 marked.setOptions({
@@ -90,7 +90,7 @@ const copyToClipboard = async (message, index) => {
       </div>
     </div>
 
-    <div v-if="isLoading" class="messages__item messages__item--response messages__item--typing">
+    <div v-if="isLoading" class="messages__item messages__item--cohere messages__item--typing">
       <div class="typing-indicator">
         <span></span>
         <span></span>
