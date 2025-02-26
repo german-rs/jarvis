@@ -16,10 +16,10 @@ import BrandComponent from '@/components/BrandComponent.vue'
 
           <div class="about__text">
             <p class="about__text-paragraph">
-              LLarvis es un chat inteligente que utiliza la tecnología de Cohere para ofrecer
+              Jarvis es un chat inteligente que utiliza la tecnología de Cohere para ofrecer
               servicios avanzados de procesamiento de lenguaje natural. Esta aplicación de
               mensajería, basada en inteligencia artificial, facilita la comunicación fluida entre
-              usuarios y un asistente virtual. LLarvis se ha creado como proyecto final de un
+              usuarios y un asistente virtual. Jarvis se ha creado como proyecto final de un
               bootcamp frontend.
             </p>
           </div>

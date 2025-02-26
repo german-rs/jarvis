@@ -1,5 +1,5 @@
 <template>
-  <img src="../../public/jarvis_2.svg" alt="Imagen" class="animar" />
+  <img src="/jarvis_2.svg" alt="Imagen" class="animar" />
 </template>
 
 <script>
