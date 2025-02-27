@@ -19,8 +19,7 @@ import BrandComponent from '@/components/BrandComponent.vue'
               Jarvis es un chat inteligente que utiliza la tecnología de Cohere para ofrecer
               servicios avanzados de procesamiento de lenguaje natural. Esta aplicación de
               mensajería, basada en inteligencia artificial, facilita la comunicación fluida entre
-              usuarios y un asistente virtual. Jarvis se ha creado como proyecto final de un
-              bootcamp frontend.
+              usuarios y un asistente virtual.
             </p>
           </div>
         </div>
